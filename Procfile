@@ -1,1 +1,1 @@
-web: gunicorn app:CropRecommendationApplication.py
+web: gunicorn app:CropRecommendationApplication
