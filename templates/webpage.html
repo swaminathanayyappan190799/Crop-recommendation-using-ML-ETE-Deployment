@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Crop Recommendation Using Machine Learning</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+<div title="Welcome Title Division" class='Welcome_division'>
+	<center>
+	<h1 class="Page-Title"><b>Crop Recommendation System</b></h1>
+	<p class="Page-Info"><i>This Webpage Will Suggests About The Crops Which are Appropriate To Your Field</i></p>
+</center>
+</div>
+<br>
+<div title="Crop Image" class="Crop_img_div">
+	<img src="{{url_for('static',filename='crop_earth_com.jpg')}}" alt="Crop Photo" class="Crop-img" style="width:1000px;height:550px;">
+	<p class="img-source">Image Source : www.earth.com </p>
+</div>
+<div class="Input-fields" title="Input field">
+	<form action="{{url_for('predict')}}" method="post">
+	Level of Nitrogen in the soil   :    <input type="number" name="N" step="any" placeholder="Nitrogen" required>
+	<br>
+	<br>
+	Level of Phosphorus in the soil :  <input type="number" name="P" step="any" placeholder="Phosphorus" required>
+	<br>
+	<br>
+	Level of Potassium in the soil  :  <input type="number" name="K" step="any" placeholder="Potassium" required>
+	<br>
+	<br>
+	Level of temperature            : <input type="number" name="temperature" step="any" placeholder="Temperature in celsius" required>
+	<br>
+	<br>
+	Humidity 						: <input type="number" name="humidity" step="any" placeholder="Humidity" required>
+	<br>
+	<br>
+	Power of Hydrogen in soil 		: <input type="number" name="ph" step="any" placeholder="ph" required>
+	<br>
+	<br>
+	Rainfall						: <input type="number" name="rain" step="any" placeholder="level of rainfall" required>
+	<br>
+	<button class='Predict-button'>Predict</button>
+</form>
+</div>
+<div class="predicted-results" title="Predicted output">
+	<i>The suggested crop for your farm is : </i> 
+	<br>
+	<br>
+	<strong><em class="p-text">{{prediction}}</em></strong>
+</div>
+<div title="credits" class="credits">
+	<center>Created by : Swaminathan ayyappan || Follow at : <a href="https://www.linkedin.com/in/swaminathan-ayyappan-60b685175/" target="_blank">(LinkedIn)</a></center>
+</div>
+</body>
+</html>
