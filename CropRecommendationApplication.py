@@ -29,4 +29,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    CropRecommendationApplication.run(debug=True)
+    CropRecommendationApplication.run(host="0.0.0.0", port=5000, debug=True)

@@ -30,5 +30,4 @@ nb_classifier=GaussianNB() #Instantiating the naive bayes classifier class.
 nb_classifier.fit(X_train,y_train) #training the model with the training data.
 
 # Saving model into an bytecode format
-pickle.dump(nb_classifier, open('Croprecommendationmodel.pkl','wb'))
-
+pickle.dump(nb_classifier, open('C:\\Users\\swaminathan.ayyappan\\Desktop\\docker-test\\Crop-recommendation-using-ML-ETE-Deployment\\Code\\Croprecommendationmodel.pkl','wb'))
