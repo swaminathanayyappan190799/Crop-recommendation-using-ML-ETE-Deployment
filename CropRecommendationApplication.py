@@ -7,6 +7,7 @@ Created on Mon Mar 15 21:13:31 2021
 """
 import numpy as np
 from flask import Flask,request,render_template
+import os
 import pickle
 
 CropRecommendationApplication = Flask(__name__)
@@ -28,5 +29,6 @@ def predict():
 	return render_template('webpage.html',prediction=decoded_form[out])
 
 
-if __name__ == "__main__":
-    CropRecommendationApplication.run(host="0.0.0.0", port=5000, debug=True)
+if __name__=="__main__":
+    	port = int(os.environ.get("PORT", 5000))
+    	CropRecommendationApplication.run(host="0.0.0.0",port=port,debug=True)
